@@ -2,38 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teams</title>
   </head>
   <body>
     <header>
       <div id="header-wrapper">
         <div id="my-picture">
-          <img src="images/network-team-icon.png" width="100px" alt="" />
+          <img src="images/network-team-icon.png" alt="" width="100" />
         </div>
         <div id="header-info">
-          <h1>Teams Networking...</h1>
+          <h1>Teams Networking</h1>
           <h2>CRUD operations example (Create, Read, Update, Delete)</h2>
         </div>
       </div>
     </header>
     <section>
-      <table id="teamsTable" border="1">
-        <thead>
-          <tr>
-            <th>Promotions</th>
-            <th>Members</th>
-            <th>Project name</th>
-            <th>Project URL</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-        <tfoot></tfoot>
-      </table>
+      <form action="secretary.html" method="get">
+        <table id="teamsTable" border="1">
+          <thead>
+            <tr>
+              <th>Promotion</th>
+              <th>Members</th>
+              <th>Project Name</th>
+              <th>Project URL</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <td>
+                <input type="text" name="promotion" id="promotion" placeholder="Enter promotion" required />
+              </td>
+              <td>
+                <input type="text" name="members" id="members" placeholder="Enter members" required />
+              </td>
+              <td>
+                <input type="text" name="name" id="name" placeholder="Enter name" required />
+              </td>
+              <td>
+                <input type="text" name="url" id="url" placeholder="Enter project url" required />
+              </td>
+              <td>
+                <button type="submit">💾</button>
+                <button type="reset">✖</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </form>
     </section>
     <footer>
-      <a href="https://github.com/dpuie/teams-networking" target="_blank"> source code </a>
+      <a href="https://github.com/dpuie/teams-networking" target="_blank">👨‍💻 Source code</a>
     </footer>
   </body>
 </html>

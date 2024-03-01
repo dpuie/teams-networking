@@ -1,22 +1,18 @@
 html {
   height: 100%;
 }
-
-h1 {
-  color: white;
-  margin: 5px 0;
-}
-h2 {
-  color: white;
-  margin: 5px 0;
-  font-weight: 100;
-  font-size: 1.2em;
-}
 body {
-  margin: 0;
   min-height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  background-color: #e9f6f8;
+}
+section {
+  flex: 1;
+}
+header {
+  background-image: url(images/th.png);
 }
 #header-wrapper {
   display: flex;
@@ -24,22 +20,9 @@ body {
   align-items: center;
   background: linear-gradient(45deg, #0798abfa, transparent);
 }
-
-header {
-  background-image: url(images/th.png);
-}
-section {
+#header-info {
   flex: 1;
 }
-table {
-  width: 100%;
-}
-footer {
-  background-color: lightblue;
-  padding: 5px;
-  text-align: center;
-}
-
 #my-picture {
   padding: 5px;
   width: 108px;
@@ -47,11 +30,48 @@ footer {
 }
 #my-picture img {
   border-radius: 50%;
-  border: 4px solid white;
+  border: 4px solid #fff;
   background-color: #ffffff90;
 }
-header-info {
+#header-info {
   flex: 1;
   padding: 10px;
   text-shadow: 1px 1px 2px #000000;
+}
+h1 {
+  margin: 5px 0;
+  color: #ffffff;
+}
+h2 {
+  margin: 5px 0;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+section {
+  padding: 15px;
+}
+
+#teamsTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#teamsTable th,
+#teamsTable td {
+  border: 1px solid #057988;
+  padding: 5px;
+}
+#teamsTable th {
+  background-color: #0798ab;
+  color: white;
+}
+#teamsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
 }

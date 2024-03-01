@@ -1,10 +1,12 @@
-# teams-networking
+# nmatei.github.io
 
-## start project
+## Start project
 
-````sh
-cd../node-api
+```sh
+cd ../node-api
+npm start
+```
 
 ```sh
 npm start
-````
+```
