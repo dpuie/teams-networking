@@ -4,7 +4,6 @@
 
 ```sh
 cd ../node-api
-npm start
 ```
 
 ```sh
