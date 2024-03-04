@@ -1,5 +1,4 @@
 import "./style.css";
-
 function createTeamRequest(team) {
   fetch("http://localhost:3000/teams-json/create", {
     method: "POST",
@@ -19,12 +18,14 @@ function getTeamAsHTML(team) {
     <td>x</td>
   </tr>`;
 }
+
 function renderTeams(teams) {
   // console.warn("render", teams);
   const teamsHTML = teams.map(getTeamAsHTML);
   // console.info(teamsHTML);
   document.querySelector("#teamsTable tbody").innerHTML = teamsHTML.join("");
 }
+
 function loadTeams() {
   const promise = fetch("http://localhost:3000/teams-json")
     .then(r => r.json())
@@ -33,18 +34,20 @@ function loadTeams() {
       return teams;
     });
 }
-function getTeamValues() {
+
+function getFormValues() {
   return {
-    promotion: "WON3",
-    members: "Your Name",
-    name: "CV",
-    url: "https://github.com/nmatei/teams-networking"
+    promotion: document.getElementById("promotion").value,
+    members: document.querySelector("#members").value,
+    name: document.querySelector("input[name=name]").value,
+    url: document.querySelectorAll("input[name=url]")[0].value
   };
 }
+
 function onSubmit(e) {
   e.preventDefault();
   let team = getFormValues();
-  createTeamRequest();
+  createTeamRequest(team);
   window.location.reload();
 }
 
