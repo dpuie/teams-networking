@@ -33,16 +33,17 @@ function loadTeams() {
       return teams;
     });
 }
-
-function onSubmit(e) {
-  e.preventDefault();
-  console.warn("pls save all values");
-  let team = {
+function getTeamValues() {
+  return {
     promotion: "WON3",
     members: "Your Name",
     name: "CV",
     url: "https://github.com/nmatei/teams-networking"
   };
+}
+function onSubmit(e) {
+  e.preventDefault();
+  let team = getFormValues();
   createTeamRequest();
   window.location.reload();
 }
