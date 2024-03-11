@@ -63,6 +63,10 @@ section {
   border: 1px solid #057988;
   padding: 5px;
 }
+#teamstable tfoot input="text" (type) {
+  width: 100%;
+  box-sizing: border-box;
+}
 #teamsTable th {
   background-color: #0798ab;
   color: white;

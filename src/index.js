@@ -23,15 +23,14 @@ function deleteTeamRequest(id) {
     body: JSON.stringify({ id: id })
   });
 }
-
 function getTeamAsHTML(team) {
   return `<tr>
-    <td>${team.promotion}</td>
-    <td>${team.members}</td>
-    <td>${team.name}</td>
-    <td>${team.url}</td>
-    <td>
-      <a href="#" data-id="${team.id}">✖</a>
+  <td>${team.promotion}</td>
+  <td>${team.members}</td>
+  <td>${team.name}</td>
+  <td>${team.url}</td>
+  <td> 
+  <a href="#" data-id="${team.id}">✖</a> 
     </td>
   </tr>`;
 }
@@ -55,7 +54,7 @@ function loadTeams() {
 function getFormValues() {
   return {
     promotion: $("input[name=promotion]").value,
-    members: $("input[name=#members").value,
+    members: $("input[name=members]").value,
     name: $("input[name=name]").value,
     url: $("input[name=url]").value
   };
@@ -70,7 +69,7 @@ function onSubmit(e) {
 
 function initEvents() {
   $("#teamsForm").addEventListener("submit", onSubmit);
-  $("#teamsTable tbody").addEventListener("click body", e => {
+  $("#teamsTable tbody").addEventListener("click", e => {
     if (e.target.matches("a")) {
       const id = e.target.dataset.id;
       deleteTeamRequest(id);
