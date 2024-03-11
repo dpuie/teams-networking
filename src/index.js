@@ -96,7 +96,7 @@ function onSubmit(e) {
 }
 
 function startEdit(id) {
-  editId = true;
+  editId = id;
   const team = allTeams.find(team => {
     return id === team.id;
   });
