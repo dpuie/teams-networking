@@ -63,7 +63,7 @@ section {
   border: 1px solid #057988;
   padding: 5px;
 }
-#teamstable tfoot input="text" (type) {
+#teamstable tfoot input[type="text"] {
   width: 100%;
   box-sizing: border-box;
 }
