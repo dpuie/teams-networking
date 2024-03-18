@@ -95,12 +95,13 @@ function onSubmit(e) {
   window.location.reload();
 }
 
-function startEdit(id) {
+function startEdit(teams, id) {
   editId = id;
-  const team = allTeams.find(team => {
+  const team = teams.find(team => {
     return id === team.id;
   });
   console.warn("click on edit %o", id, team);
+  setFormValues(team);
 }
 
 function initEvents() {
@@ -113,7 +114,7 @@ function initEvents() {
     } else if (e.target.matches("a.edit-btn")) {
       //const id = e.target.getAtribute("data-id");
       const id = e.target.dataset.id;
-      startEdit(id);
+      startEdit(allTeams, id);
     }
   });
 }
